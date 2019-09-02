@@ -1,0 +1,21 @@
+Supervisor Email ---- satish@aai.aero
+Password ------------ satish
+
+
+EMPLOYEE EMAIL            PASSWORD
+
+manager1@aai.aero         manager1
+manager2@aai.aero         manager2
+manager3@aai.aero         manager3
+
+dgm1@aai.aero         	  dgm1
+dgm2@aai.aero         	  dgm2
+dgm3@aai.aero         	  dgm3
+
+
+je1@aai.aero         	  je1
+je2@aai.aero         	  je2
+je3@aai.aero         	  je3
+
+
+

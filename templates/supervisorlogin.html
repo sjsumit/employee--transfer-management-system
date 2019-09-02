@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>AAI</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<style media="all" type="text/css">
+/* main styles */
+body {
+	margin:0;
+	padding:0;
+	background:#e8eff2 ;
+  	color:#000;
+	font-family:tahoma,arial,sans-serif;
+	font-size:11px;
+	}
+form {
+	margin:0;
+	padding:0
+	}
+img {border:none;}
+a {color:#060606;text-decoration: none}
+a:hover {text-decoration: underline}
+input {vertical-align:middle}
+.floatleft {float:left !important}
+.floatright {float:right !important}
+.clear {clear:both !important}
+.bold {font-weight:bold !important}
+.normal {font-weight:normal !important}
+.block {display:block !important}
+input.text,
+select,
+textarea {
+	font-family:arial,sans-serif;
+	color:#333;
+	font-size:12px;
+	vertical-align:middle;
+	}
+input.text {
+	padding:1px 0 0 4px;
+	height:14px;
+	font-weight:normal;
+	}
+/* main container */
+#main {
+	width:992px;
+	margin:0 auto;
+	}
+/* header */
+#header {
+	position:relative;
+	width:992px;
+	height:106px;
+	background:url(../img/bg-header.gif) no-repeat left bottom;
+	}
+/* site logo */
+a.logo {
+    
+	position:absolute;
+	top:5px;
+	left:4px;
+	}
+	
+/* header tabs */
+#top-navigation {
+	position:absolute;
+	top:60px;
+	left:12px;
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+#top-navigation li {
+	float:left;
+	margin:0 3px 0 0;
+	height:34px;
+	background:url(../img/tab.gif) repeat-x top;
+	}
+#top-navigation li a {
+	float:left;
+	display:block;
+	height:20px;
+	line-height:19px;
+	color:#606060;
+	padding:4px 0 0 0;
+	}
+#top-navigation li span {
+	float:left;
+	background:url(../img/tab-left.gif) no-repeat left top;
+	}
+#top-navigation li span span {
+	background:url(../img/tab-right.gif) no-repeat right top;
+	padding:7px 10px 0 10px;
+	}
+#top-navigation li.active {
+	padding:0;
+	height:34px;
+	background:url(../img/tab-active.gif) repeat-x top;
+	margin-right:2px;
+	}
+#top-navigation li.active span {
+	background:url(../img/tab-active-left.gif) no-repeat left top;
+	height:34px;
+	}
+#top-navigation li.active span span {
+	background:url(../img/tab-active-right.gif) no-repeat right top;
+	height:23px;
+	padding:11px 10px 0 10px;
+	line-height:19px;
+	color:#005FD8 ;
+	}
+	
+/* middle */
+#middle {
+	float:left;
+	width:967px;
+	background:url(../img/bg-middle.gif) repeat-y left;
+	padding:0 13px 0 12px;
+	}
+/* left column */
+#left-column {
+	float:left;
+	padding:1px 14px 0 12px;
+	width:151px;
+	}
+/* right column */
+<!-- #right-column {
+	float:right;
+	padding:0 9px 0 0;
+	width:133px;
+	} -->
+/* center column */
+#center-column {
+	float:left;
+	width:614px;
+	background:url(../img/bg-center-column.jpg) no-repeat left top;
+	min-height:584px;
+	padding:12px 16px 0 13px;
+	}	
+* html #center-column {height:584px;}
+
+/* footer */
+#footer {
+	float:left;
+	width:100%;
+	background:url(../img/bg-footer.gif) no-repeat;
+	height:15px;
+	}
+	
+/* left column styles */
+#left-column a {color:#3E3E3E;}
+#left-column h3 {
+	font-size:11px;
+	margin:0;
+	color:#fff;
+	background:url(../img/bg-left-header.gif) no-repeat left top;
+	height:25px;
+	line-height:23px;
+	padding:0 0 0 9px;
+	}
+ul.nav {
+	margin:0 0 11px 0;
+	border-bottom:2px solid #FF9600;
+	background:#ECEFE7;
+	list-style:none;
+	padding:0 2px;
+	}
+ul.nav li {
+	padding:4px 4px 6px 5px;
+	background:url(../img/bg-dotted.gif) repeat-x bottom;
+	}
+ul.nav a {
+	padding:0 0 0 12px;
+	background:url(../img/arrow.gif) no-repeat 0 4px;
+	}
+ul.nav a:hover {
+	font-weight:bold;
+	}
+ul.nav li.last {background:none;}
+
+#left-column .link {
+	display:block;
+	width:142px;
+	height:25px;
+	background:url(../img/bg-left-link.gif);
+	margin:0 0 4px 0;
+	font-weight:bold;
+	padding:0 0 0 9px;
+	line-height:25px;
+	color:#60635A;
+	}
+	
+/* center column styles */
+.top-bar {
+	float:left;
+	width:603px;
+	<!-- border-left:2px solid #f70; -->
+	padding:0 0 0 9px;
+	margin:0 0 4px 0;
+	}
+.top-barrr {
+	float:left;
+	width:603px;
+	padding:0 0 0 9px;
+	margin:0 0 4px 0;
+	}
+    
+/* text page header */
+.top-bar h1 {
+	font:20px/21px verdana,sans-serif;
+	color:#43729F;
+	margin:0 0 4px 0;
+	}
+/* orange button */
+.top-bar a.button {
+	float:right;
+	display:block;
+	width:75px;
+	height:35px;
+	text-align:center;
+	color:#fff;
+	text-transform:uppercase;
+	font-weight:bold;
+	line-height:27px;
+	background:url(../img/bg-orange-button.gif) no-repeat;
+	}
+	
+/* bar with select */
+.select-bar {
+	clear:both;
+	border-top:2px solid #f70;
+	border-bottom:2px solid #f70;
+	padding:5px 0 3px 0;
+	margin:0 0 17px 0;
+	}
+.select-bar select {width:145px;margin:0 2px;}
+
+/* table container */
+div.table {
+	float:left;
+	position:relative;
+	width:614px;
+	margin:0 0 37px 0;
+	}
+table.listing {
+	border-bottom:1px solid #9097A9;
+	width:613px;
+	padding:0;
+	margin:0;
+	border:1px solid #9097A9;
+	}
+table.listing th {
+	border-top:0 !important;
+	}
+table.listing th.full {border-left:0;border-right:0 !important;text-align:left;text-transform:uppercase;}
+div.table img.left {
+	position:absolute;
+	top:0;
+	left:0;
+	}
+div.table img.right {
+	position:absolute;
+	top:0;
+	right:1px;
+	}
+/* table styles */
+table.listing td,
+table.listing th {
+	border:1px solid #fff;
+	text-align:center;
+	}	
+table.listing th {
+	background:#9097A9;
+	color:#fff;
+	padding:5px;
+	}
+table.listing td {
+	background:#D8D8D8;
+	color:#000;
+	padding:3px 5px;
+	}
+table.listing .bg td {
+	background:#ECECEC;
+	}
+table.listing .white td {
+	background:#fff;
+	}	
+table.listing .first {border-left:0px solid #9097A9;text-align:left;}
+table.listing .last {border-right:0px solid #9097A9;}
+
+table.listing th.first {background:#9097A9 url(../img/bg-th-left.gif) no-repeat left top;border-left:0;}
+table.listing th.last {background:#9097A9 url(../img/bg-th-right.gif) no-repeat right top;border-right:0;}
+
+table.listing .style1 {font-weight:bold;color:#1F7CF3;}
+table.listing .style2 {font-weight:bold;padding-left:16px;}
+table.listing .style3 {padding-left:25px;}
+table.listing .style4 {padding-left:35px;}
+table.form .last {padding:1px 0 1px 5px;text-align:left;}
+table.form th,
+table.form td {padding-left:10px;}
+table.form input.text {width:262px}
+
+/* table select */
+div.table .select {
+	float:right;
+	margin:2px 1px 0 0;
+	width:176px;
+	height:25px;
+	background:#9097A9 url(../img/bg-select.gif);
+	color:#fff;
+	}
+div.table .select strong {
+	float:left;
+	padding:5px 0 0 5px;
+	}	
+div.table .select select {
+	float:right;
+	width:78px;
+	margin:2px 3px 0 0;
+	text-align:right;	
+	}
+	
+/* right column header */
+#right-column .h {
+	float:left;
+	background:#7E878A;
+	border:1px solid #B8B8B8;
+	border-bottom:0;
+	padding:3px 10px;
+	color:#fff;
+	text-transform:uppercase;
+	}
+/* right column box */
+#right-column .box {
+	float:left;
+	width:121px;
+	padding:5px;
+	border:1px solid #B8B8B8;
+	background:#EBEBEB;
+	margin:0 0 15px 0;
+	}
+	
+/* right column buttons */
+.buttons {
+	clear:both;
+	text-align:center;
+	padding:30px 0 15px 0;
+	}
+.buttons input {margin:0 0 6px 0;}
+.color{ color:#294adb}
+</style>
+</head>
+<body>
+<div id="main">
+  <div id="header"> <a href="#" class="logo"><img src="img/logo.jpg" width="100" height="75" alt="" /></a>
+    <ul id="top-navigation">
+      <li class="color"><span><span><h1>COMMUTATUS</h1></span></span></li>
+      <!-- <li><span><span><a href="#">Users</a></span></span></li>
+      <li><span><span><a href="#">Orders</a></span></span></li>
+      <li><span><span><a href="#">Settings</a></span></span></li>
+      <li><span><span><a href="#">Statistics</a></span></span></li>
+      <li><span><span><a href="#">Design</a></span></span></li>
+      <li><span><span><a href="#">Contents</a></span></span></li> -->
+    </ul>
+  </div>
+  <div id="middle">
+    <div id="left-column">
+      <h2 class="color">SUPERVISOR LOGIN</h2>
+      <!-- <ul class="nav">
+        <li><a href="#">Lorem Ipsum dollar</a></li>
+        <li><a href="#">Dollar</a></li>
+        <li><a href="#">Lorem dollar</a></li>
+        <li><a href="#">Ipsum dollar</a></li>
+        <li><a href="#">Lorem Ipsum dollar</a></li>
+        <li class="last"><a href="#">Dollar Lorem Ipsum</a></li>
+      </ul> -->
+   <!--    <a href="#" class="link">Link here</a> <a href="#" class="link">Link here</a> </div> -->
+    <div id="center-column">
+      <div class="top-bar"> <a href="/" class="button"><u>Logout</u> </a>
+        <h1>Welcome {{ session['employeename']}}</h1>
+      <!--  <div class="breadcrumbs"> <a href="http://127.0.0.1:5000/login">Click Here To Login As Employee</a> </div>  -->
+      </div>
+      <br />
+      
+      
+      
+      
+ <form name="startpage" method="POST" action="/supervisorlogin">
+    <div class="form-group">
+      <strong>CHOOSE EMPLOYEE : </strong>
+      <label>
+       <select name="employname" id="employname">
+              <option value="Employee Name ">Employee Name</option>
+             <option value="Vksharma">Vksharma</option>
+             <option value="Dgm1">Dgm1</option>
+             <option value="Dgm2">Dgm2</option>
+             <option value="Dgm3">Dgm3</option>
+             <option value="Manager1">Manager1</option>
+             <option value="Manager2">Manager2</option>
+             <option value="Manager3">Manager3</option>
+             <option value="Je1">Je1</option>
+             <option value="Je2">Je2</option>
+             <option value="Je3">Je3</option>
+             </select>
+
+        <input type="submit" name="Submit" value="Submit"/>      
+        </label>
+      </div>
+      </form>
+      
+      
+      
+      <div class="table"> <img src="img/bg-th-left.gif" width="8" height="7" alt="" class="left" /> <img src="img/bg-th-right.gif" width="7" height="7" alt="" class="right" />
+        <table class="listing" cellpadding="0" cellspacing="0">
+          <tr>
+            <th class="full" >Employee Details</th>
+            <th></th>
+            <!-- <th>Employee ID</th>
+            <th>Current Posting</th>
+            <th>New Posting</th>
+            <th>Transfer Airport</th>
+            <th>Transfer Date</th>
+            <th></th> -->
+            
+          </tr>
+          <tr class="bg">
+            <td class="first style1">- Employee Name</td>
+            <td><img src="url(../img/bg-th-right.gif)" width="16" height="16" alt="" /><strong>{{session['newname']}}</strong></td>
+             </tr>
+          <tr>
+            <td class="first style1" width="172">- Employee Id</td>
+            <td><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="" /><strong>  {{session['newemp_id'] }}</strong></td>
+          <!--   <td><img src="img/hr.gif" width="16" height="16" alt="" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="" /></td>
+            <td><img src="img/edit-icon.gif" width="16" height="16" alt="" /></td>
+            <td><img src="img/login-icon.gif" width="16" height="16" alt="" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td class="last"><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="add" /></td> -->
+          </tr>
+          <tr class="bg">
+            <td class="first style1">- Employee Designation</td>
+            <td><img src="url(../img/bg-th-right.gif)" width="16" height="16" alt="" /><strong>   {{session['newemp_designation']}}</strong></td>
+           <!--  <td><img src="img/hr.gif" width="16" height="16" alt="" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td><img src="img/edit-icon.gif" width="16" height="16" alt="edit" /></td>
+            <td><img src="img/login-icon.gif" width="16" height="16" alt="login" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td class="last"><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="add" /></td> -->
+          </tr>
+           <tr>
+            <td class="first style1"width="172" >- Department</td>
+            <td><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="" /><strong>{{session['newdepartment']}}</strong></td>
+<!--             <td><img src="img/hr.gif" width="16" height="16" alt="" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td><img src="img/edit-icon.gif" width="16" height="16" alt="edit" /></td>
+            <td><img src="img/login-icon.gif" width="16" height="16" alt="login" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td class="last"><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="add" /></td> -->
+          </tr>
+           <tr class="bg">
+            <td class="first style1" width="172">- Approving Officer</td>
+            <td><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="" /><strong> {{session['newapprovingofficer']}}</strong></td>
+     <!--        <td><img src="img/hr.gif" width="16" height="16" alt="" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td><img src="img/edit-icon.gif" width="16" height="16" alt="edit" /></td>
+            <td><img src="img/login-icon.gif" width="16" height="16" alt="login" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td class="last"><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="add" /></td> -->
+          </tr>
+          <tr>
+            <td class="first style1" width="172">- Reporting Officer</td>
+            <td><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="" /><strong> {{ session['newreportingofficer']}}</strong></td>
+        <!--     <td><img src="img/hr.gif" width="16" height="16" alt="" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td><img src="img/edit-icon.gif" width="16" height="16" alt="edit" /></td>
+            <td><img src="img/login-icon.gif" width="16" height="16" alt="login" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td class="last"><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="add" /></td> -->
+          </tr>
+          <tr class="bg">
+            <td class="first style1"width="172" >- Current Posting </td>
+            <td><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="" /><strong>{{ session['newemp_currentposting']}}</strong></td> 
+        <!--     <td><img src="img/hr.gif" width="16" height="16" alt="" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td><img src="img/edit-icon.gif" width="16" height="16" alt="edit" /></td>
+            <td><img src="img/login-icon.gif" width="16" height="16" alt="login" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td class="last"><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="add" /></td> -->
+           </tr>
+          <tr>
+            <td class="first style1" width="172">- Date of Current Posting </td>
+            <td><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="" /><strong>{{  session['newemp_D0CP']}}</strong></td>  
+          <!--   <td><img src="img/hr.gif" width="16" height="16" alt="" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td><img src="img/edit-icon.gif" width="16" height="16" alt="edit" /></td>
+            <td><img src="img/login-icon.gif" width="16" height="16" alt="login" /></td>
+            <td><img src="img/save-icon.gif" width="16" height="16" alt="save" /></td>
+            <td class="last"><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="add" /></td> -->
+          </tr> 
+      <!--     <tr class="bg">
+            <td class="first style1">- Transfer Place</td>
+            <td><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="" /></td>
+
+          </tr>
+          <tr>
+            <td class="first style1">- Date Of New Posting</td>
+            <td><img src="url(../img/bg-th-left.gif)" width="16" height="16" alt="" /></td>
+          </tr>  --> 
+        </table>
+      <!--   <div class="select"> <strong>Transfer Place</strong>
+          <select>
+            <option>Delhi Airport</option>
+             <option>Mumbai Airport</option>
+             <option>Chennai Airport</option>
+             <option>Kolkata Airport</option>
+             
+          </select>
+          
+        </div>
+        <div class="select"> <strong>Transfer Date</strong>
+          <select>
+            <option>1</option>
+             <option>2</option>
+          </select>
+         </div> -->
+        
+      </div>
+      <div class="table"> <img src="img/bg-th-left.gif" width="8" height="7" alt="" class="left" /> <img src="img/bg-th-right.gif" width="7" height="7" alt="" class="right" />
+        <table class="listing form" cellpadding="0" cellspacing="0">
+          <tr>
+            <th class="full" colspan="2">Posting Details</th>
+          </tr>
+            </tr>
+          <!-- <tr class="bg">
+            <td class="first style1"><strong>Current Posting</strong></td>
+            <td class="last"><!-- <input type="text" class="text" /></td>
+          </tr>
+          <tr>
+            <td class="first style1" width="172"><strong>Date Of Current Posting</strong></td>
+            <td class="last"></td>
+          </tr> -->
+          
+    <form name="startpage" method="POST" action="/postingdetails">
+      <div class="form-group">
+          <tr class="bg">
+            <td class="first style1" width="172"><strong>New Posting</strong></td>
+            <td class="last" width=""> 
+            <select name="airportname" id="airportname">
+             <option value="Delhi Branch">Delhi Branch</option>
+             <option value="Hyderabad Branch"> Hyderabad Branch</option>
+             <option value="Mumbai Branch">Mumbai Branch</option>
+             <option value="Chennai Branch">Chennai Branch</option>
+             <option value="Bangalore Branch">Bangalore Branch</option>
+             <option value="Guwahati Branch">Guwahati< Branch/option>
+             <option value="Goa Branch"> Goa Branch</option>
+             <option value="Coimbatore Branch">Coimbatore Branch</option>
+             <option value="Shimla Branch"> Shimla Branch</option>
+             <option value="Srinagar Branch">Srinagar Branch</option>
+             <option value="Leh Branch"> Leh Branch</option>
+                                               
+                                           
+                       
+          </select>
+          </td>
+          </tr>
+          <tr>
+            <td class="first style1" width="172"><strong>Date Of New Posting</strong></td>
+            <td class="last"width="">
+            <select name="mday" id="mday">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+             <option value="8">8</option>
+             <option value="9">9</option>
+             <option value="10">10</option>
+             <option value="11"1>11</option>
+             <option value="12">12</option>
+             <option value="13">13</option>
+             <option value="1">14</option>
+             <option value="1">15</option>
+             <option value="1">16</option>
+             <option value="1">17</option>
+             <option value="1">18</option>
+             <option value="1">19</option>
+             <option value="1">20</option>
+             <option value="1">21</option>
+             <option value="1">22</option>
+             <option value="1">23</option>
+             <option value="1">24</option>
+             <option value="1">25</option>
+             <option value="1">26</option>
+             <option value="1">27</option>
+             <option value="1">28</option>
+             <option value="1">29</option>
+             <option value="1">30</option>
+             <option value="1">31</option>
+             
+             
+          </select>
+          /
+           <select name="month" id="month">
+             <option value="01">01</option>
+             <option value="02">02</option>
+             <option value="03">03</option>
+             <option value="04">04</option>
+             <option value="1">05</option>
+             <option value="1">06</option>
+             <option value="1">07</option>
+             <option value="1">08</option>
+             <option value="1">09</option>
+             <option value="1">10</option>
+             <option value="1">11</option>
+             <option value="1">12</option>
+          </select>
+          /
+           <select name="year" id="year">
+             <option value="2018">2018</option>
+             <option value="2019">2019</option>
+             <option value="2020">2020</option>
+             <option value="2021">2021</option>
+             <option value="1">2022</option>
+             <option value="1">2023</option>
+             <option value="1">2024</option>
+             <option value="1">2025</option>
+             
+          </select> 
+          
+         </div>
+          </td>
+          </tr>
+        </table>
+        <div class="top-bar"> <input type="Submit" name="Submit" value="Submit"><strong><u></u></strong></a>
+        
+        <p>&nbsp;</p>
+      </div>
+      </div>
+          </form>
+       
+      
+     <!-- <div class="table"> <!-- <img src="img/bg-th-left.gif" width="8" height="7" alt="" class="left" /> <img src="img/bg-th-right.gif" width="7" height="7" alt="" class="right"/>
+        <table class="listing form" cellpadding="0" cellspacing="0">
+          <tr>
+            <th class="full" colspan="2">Add Employee</th>
+          </tr>
+          <tr class="bg">
+            <td class="first style1" width="172"><strong>Employee Name</strong></td>
+            <td class="last"> <input type="text" class="text" /></td>
+          </tr>
+          <tr >
+            <td class="first style1" width="172"><strong>Employee Id</strong></td>
+            <td class="last"> <input type="text" class="text" /></td>
+          </tr>
+          <tr class="bg">
+            <td class="first style1" width="172"><strong>Employee Designation</strong></td>
+            <td class="last"> <input type="text" class="text" /></td>
+          </tr>
+           <tr >
+            <td class="first style1" width="172"><strong>Department</strong></td>
+            <td class="last"> <input type="text" class="text" /></td>
+          </tr>
+          <tr class="bg">
+            <td class="first style1" width="172"><strong>Approving Officer</strong></td>
+            <td class="last"> <input type="text" class="text" /></td>
+          </tr>
+           <tr>
+            <td class="first style1" width="172"><strong>Reporting Officer</strong></td>
+            <td class="last"> <input type="text" class="text" /></td>
+          </tr>
+          <tr class="bg">
+            <td class="first style1" width="172"><strong>Current Posting</strong></td>
+            <td class="last"> <input type="text" class="text" /></td>
+          </tr>
+           <tr>
+            <td class="first style1" width="172"><strong>Date of Current Posting</strong></td>
+            <td class="last"> <input type="text" class="text" /></td>
+          </tr> -->
+          
+          
+          
+    </div>
+   <!--  <div id="right-column"> <strong class="h">INFO</strong>
+      <div class="box">Detect and eliminate viruses and Trojan horses, even new and unknown ones. Detect and eliminate viruses and Trojan horses, even new and </div>
+    </div> -->
+  </div>
+  <div id="footer"></div>
+</div>
+</body>
+</html>
+
+
+
+
